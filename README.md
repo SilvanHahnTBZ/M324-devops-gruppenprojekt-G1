@@ -58,7 +58,7 @@ Unser Kanban-Board verwendet folgende Phasen:
 
 ### Zeitlogging
 
-[Zeitlogging öffnen](LINK_EINFÜGEN)
+[Zeitlogging öffnen](https://docs.google.com/spreadsheets/d/12KcGT1z2t_Fag7OSbxu6rCZNN7VGnC3hw1QQB_7yJAM/edit)
 
 Jedes Gruppenmitglied dokumentiert die aufgewendete Zeit pro Modultag und Aufgabe.
 
