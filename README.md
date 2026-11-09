@@ -58,7 +58,7 @@ Unser Kanban-Board verwendet folgende Phasen:
 
 ### Zeitlogging
 
-[Zeitlogging öffnen](https://docs.google.com/spreadsheets/d/12KcGT1z2t_Fag7OSbxu6rCZNN7VGnC3hw1QQB_7yJAM/edit?gid=0#gid=0)
+[Zeitlogging öffnen](https://docs.google.com/spreadsheets/d/12KcGT1z2t_Fag7OSbxu6rCZNN7VGnC3hw1QQB_7yJAM/edit?usp=sharing)
 
 Jedes Gruppenmitglied dokumentiert die aufgewendete Zeit pro Modultag und Aufgabe.
 
@@ -74,7 +74,7 @@ Erfasst werden:
 
 Persönliche Lernjournale können separat geführt werden.
 
-- Lernjournal Mitglied 1: Link folgt
+- Lernjournal Silvan: [M324 DevOps – Persönliches Lernjournal – Silvan Hahn](https://docs.google.com/document/d/1YfETWUD9T1VkooYqIDxbH_vE80vJdmgc3RXRgZFIFKk/edit?tab=t.0)
 - Lernjournal Mitglied 2: Link folgt
 - Lernjournal Mitglied 3: Link folgt
 - Lernjournal Mitglied 4: Link folgt
