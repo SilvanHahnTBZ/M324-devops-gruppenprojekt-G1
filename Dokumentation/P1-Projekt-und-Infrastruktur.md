@@ -21,7 +21,7 @@ Wir entwickeln ein Backend für die Flughafen- und Flugverwaltung. Der Flughafen
 - Das [GitHub-Repository](https://github.com/SilvanHahnTBZ/M324-devops-gruppenprojekt-G1) enthält die Ordner `Theorie/`, `Dokumentation/` und `Code/`. Die [README](../README.md) ist der Einstieg in die Unterlagen.
 - Das [Kanban-Board](https://github.com/users/SilvanHahnTBZ/projects/1/views/1) enthält Todo, In Progress, Review, Done und Backlog. Die Aufgaben für spätere Modultage liegen im Backlog.
 - Die Gruppe erfasst ihren Aufwand pro Person, Modultag und Aufgabe im [Zeitlog](https://docs.google.com/spreadsheets/d/12KcGT1z2t_Fag7OSbxu6rCZNN7VGnC3hw1QQB_7yJAM/edit). Laut Bestätigung aus der Gruppe ist der Schreibzugriff für die Lehrperson dort erteilt.
-- Für das GitHub-Repository wurde die Lehrperson als Mitwirkende eingeladen. Die Annahme der Einladung steht laut GitHub noch aus (Stand 09.11.2026).
+- Die Lehrperson hat die GitHub-Einladung angenommen und besitzt als Mitwirkende Schreibzugriff auf das Repository. Der Zugriff wurde am 09.11.2026 in GitHub geprüft.
 
 ## KI-Nachweis
 
