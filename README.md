@@ -74,7 +74,7 @@ Erfasst werden:
 
 Persönliche Lernjournale können separat geführt werden.
 
-- Lernjournal Mitglied 1: Link folgt
+- [Lernjournal Silvan Hahn](https://docs.google.com/document/d/1YfETWUD9T1VkooYqIDxbH_vE80vJdmgc3RXRgZFIFKk/edit)
 - Lernjournal Mitglied 2: Link folgt
 - Lernjournal Mitglied 3: Link folgt
 - Lernjournal Mitglied 4: Link folgt
