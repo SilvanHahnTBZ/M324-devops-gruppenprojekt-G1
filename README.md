@@ -47,7 +47,7 @@ Alle erstellten Dokumentationsdateien werden hier direkt verlinkt.
 
 ### Kanban-Board
 
-[GitHub Kanban-Board](LINK_EINFÜGEN)
+[GitHub Kanban-Board](https://github.com/users/SilvanHahnTBZ/projects/1)
 
 Unser Kanban-Board verwendet folgende Phasen:
 
