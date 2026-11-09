@@ -7,9 +7,9 @@ Dieses Repository enthält unser Gruppenprojekt im Modul DevOps.
 
 Ziel ist die Entwicklung einer Backend-Anwendung mit einer REST-API sowie die praktische Anwendung von DevOps-Methoden wie Versionsverwaltung, Testing, CI/CD und agiler Zusammenarbeit.
 
-**Projekt:** Noch nicht festgelegt  
+**Projekt:** Flughafen- und Flugverwaltung  
 **Teamgrösse:** 4 Personen  
-**Technologien:** Noch nicht festgelegt
+**Technologien:** Python, FastAPI, pytest, PostgreSQL und GitHub Actions
 
 ---
 
@@ -30,6 +30,8 @@ Alle erstellten Theoriedateien werden hier direkt verlinkt.
 ## Dokumentation
 
 Hier befinden sich die Dokumentationen zu unserem Projekt.
+
+- [P1 – Projekt und Infrastruktur](Dokumentation/P1-Projekt-und-Infrastruktur.md) mit Technologieentscheid und KI-Nachweis
 
 Geplante Themen:
 
@@ -55,6 +57,7 @@ Unser Kanban-Board verwendet folgende Phasen:
 - **In Progress** – Aufgaben in Bearbeitung
 - **Review** – Aufgaben zur Überprüfung
 - **Done** – Abgeschlossene Aufgaben
+- **Backlog** – Aufgaben für spätere Modultage
 
 ### Zeitlogging
 
@@ -81,15 +84,16 @@ Persönliche Lernjournale können separat geführt werden.
 
 ## Technologien
 
-Die eingesetzten Technologien werden gemeinsam im Team ausgewählt und dokumentiert.
+Beide Mikroservices verwenden denselben Technologie-Stack.
 
 | Bereich | Technologie |
 |---------|-------------|
-| Programmiersprache | Noch offen |
-| Backend-Framework | Noch offen |
-| Datenbank | Noch offen |
+| Programmiersprache | Python |
+| Backend-Framework | FastAPI |
+| Unit-Tests | pytest |
+| Datenbank | PostgreSQL |
 | Versionsverwaltung | Git / GitHub |
-| CI/CD | Noch offen |
+| CI/CD | GitHub Actions |
 | Projektmanagement | GitHub Projects |
 
 ## Zusammenarbeit
