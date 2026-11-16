@@ -401,9 +401,9 @@ flowchart LR
 | **Geprüft mit** | Fowler, *Canary Release* [6]: Canary Releases sollen ausdrücklich nicht mit A/B Tests vermischt werden. Optimizely [8] beschreibt A/B Testing als Vergleich von Varianten mit statistischer Auswertung. |
 | **Korrektur** | Kapitel 5 enthält jetzt eine Gegenüberstellung (Ziel, Dauer, Messgrösse); im Quellenvergleich ist der Unterschied begründet. |
 | **Zweiter geprüfter Punkt** | Die Aussage „Passwörter mit SHA-256 verschlüsseln“ wurde mit dem OWASP Password Storage Cheat Sheet [13] verglichen: Passwörter werden gehasht (nicht verschlüsselt) und mit langsamen Verfahren wie Argon2id. Kapitel 9 wurde entsprechend formuliert. |
-| **Eigener Anteil** | *(nach der Verständnisabfrage ergänzt)* |
-| **Verständnisprüfung** | *(nach der Verständnisabfrage ergänzt)* |
-| **Eigene Schlussfolgerung** | *(nach der Verständnisabfrage ergänzt)* |
+| **Eigener Anteil** | Zusammenfassung der Kapitel 1–11 gelesen und die Verständnisfragen selbst beantwortet. Die Antwort auf Frage 5 (Ablauf bei fehlerhaftem Release) habe ich selbst geschrieben und vor dem Abschicken von einer KI überprüfen lassen. |
+| **Verständnisprüfung** | Die KI hat mir 5 Fragen gestellt. **Richtig:** Delivery = auslieferbar, ein Mensch gibt frei; Deployment = automatisch live, wenn alle Tests grün sind. Canary prüft Stabilität, A/B Testing prüft, welche Variante besser wirkt. Ablauf bei Health Check 500: Rollout stoppen, Rollback auf die Vorversion, Logs prüfen, Ursache finden, Fix testen, kontrolliert neu ausrollen, überwachen (selbst geschrieben, KI-geprüft). **Teilweise richtig:** Blue/Green und Canary richtig erklärt, bei den Kosten aber offen gelassen – Blue/Green ist teurer, weil eine komplette zweite Umgebung nötig ist [4]. Passwörter: Klartext verboten, hashen mit Salt richtig; es fehlte das Verfahren (Argon2id/bcrypt statt MD5/SHA-256) [13], und Passwortregeln (Länge, Sonderzeichen) betreffen die Wahl, nicht die Speicherung. DB-Passwort: „nie im Code“ richtig, es fehlte der Ort (GitHub Environment Secrets, lokal `.env` in `.gitignore`) [15]. Diese Punkte wiederhole ich vor dem Fachgespräch FG4. |
+| **Eigene Schlussfolgerung** | Am meisten mitgenommen habe ich, wie Passwörter sicher gespeichert werden und was der Unterschied zwischen Continuous Delivery und Continuous Deployment ist. |
 
 ---
 
