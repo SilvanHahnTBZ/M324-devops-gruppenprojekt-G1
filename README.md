@@ -7,9 +7,9 @@ Dieses Repository enthält unser Gruppenprojekt im Modul DevOps.
 
 Ziel ist die Entwicklung einer Backend-Anwendung mit einer REST-API sowie die praktische Anwendung von DevOps-Methoden wie Versionsverwaltung, Testing, CI/CD und agiler Zusammenarbeit.
 
-**Projekt:** Noch nicht festgelegt  
+**Projekt:** Flughafen- und Flugverwaltung  
 **Teamgrösse:** 4 Personen  
-**Technologien:** Noch nicht festgelegt
+**Technologien:** Python, FastAPI, pytest, PostgreSQL und GitHub Actions
 
 ---
 
@@ -32,6 +32,8 @@ Alle erstellten Theoriedateien werden hier direkt verlinkt.
 ## Dokumentation
 
 Hier befinden sich die Dokumentationen zu unserem Projekt.
+
+- [P1 – Projekt und Infrastruktur](Dokumentation/P1-Projekt-und-Infrastruktur.md) mit Technologieentscheid und KI-Nachweis
 
 Geplante Themen:
 
@@ -57,6 +59,7 @@ Unser Kanban-Board verwendet folgende Phasen:
 - **In Progress** – Aufgaben in Bearbeitung
 - **Review** – Aufgaben zur Überprüfung
 - **Done** – Abgeschlossene Aufgaben
+- **Backlog** – Aufgaben für spätere Modultage
 
 ### Zeitlogging
 
@@ -77,21 +80,22 @@ Erfasst werden:
 Persönliche Lernjournale können separat geführt werden.
 
 - Lernjournal Silvan: [M324 DevOps – Persönliches Lernjournal – Silvan Hahn](https://docs.google.com/document/d/1YfETWUD9T1VkooYqIDxbH_vE80vJdmgc3RXRgZFIFKk/edit?tab=t.0)
-- Lernjournal Mitglied 2: Link folgt
+- Lernjournal Ricardo: [Lernjournal Ricardo Kraus](https://docs.google.com/document/d/1DGdcHLWD9LtrQmbclRaXGcRknNY7jJQQkrzMefetWHA/edit?usp=sharing)
 - Lernjournal Mitglied 3: Link folgt
 - Lernjournal Mitglied 4: Link folgt
 
 ## Technologien
 
-Die eingesetzten Technologien werden gemeinsam im Team ausgewählt und dokumentiert.
+Beide Mikroservices verwenden denselben Technologie-Stack.
 
 | Bereich | Technologie |
 |---------|-------------|
-| Programmiersprache | Noch offen |
-| Backend-Framework | Noch offen |
-| Datenbank | Noch offen |
+| Programmiersprache | Python |
+| Backend-Framework | FastAPI |
+| Unit-Tests | pytest |
+| Datenbank | PostgreSQL |
 | Versionsverwaltung | Git / GitHub |
-| CI/CD | Noch offen |
+| CI/CD | GitHub Actions |
 | Projektmanagement | GitHub Projects |
 
 ## Zusammenarbeit
