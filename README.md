@@ -29,6 +29,7 @@ Alle erstellten Theoriedateien werden hier direkt verlinkt.
 
 - [T1 – DevOps-Kultur: CALMS und The Three Ways](Theorie/T1_DevOps_Kultur.md)
 - [T2 – DevOps Prozesse: SDLC, DevOps Lifecycle und MVP](Theorie/T2_DevOps_Prozesse.md)
+- [T3 – Continuous Integration und Versionsstrategien](Theorie/T3_Continuous_Integration.md)
 
 ## Dokumentation
 
