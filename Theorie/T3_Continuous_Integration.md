@@ -477,9 +477,9 @@ Wäre der Fehler trotzdem auf `main` gelandet (z. B. ein Test fehlt), gilt Fowle
 | **Geprüft mit** | Fowler [1]: CI ist vor allem die Praxis, mindestens täglich in die Hauptlinie zu integrieren; ein Branch, der nicht zurückgemergt wird, ist kein CI. |
 | **Korrektur** | Kapitel 1 betont jetzt, dass CI eine Arbeitsweise ist und das Tool nur das Mittel. |
 | **Zweiter geprüfter Punkt** | Die Aussage „Git Flow ist der Standard“ wurde mit dem Originalartikel [6] verglichen: Der Autor empfiehlt seit 2020 für Web-Apps selbst einfachere Modelle. Kapitel 4 und der Quellenvergleich wurden angepasst. |
-| **Eigener Anteil** | *(nach der Verständnisabfrage ergänzt)* |
-| **Verständnisprüfung** | *(nach der Verständnisabfrage ergänzt)* |
-| **Eigene Schlussfolgerung** | *(nach der Verständnisabfrage ergänzt)* |
+| **Eigener Anteil** | Zusammenfassung der Kapitel 1–10 gelesen und die Verständnisfragen der KI ohne Unterlagen selbst beantwortet (siehe unten). |
+| **Verständnisprüfung** | Die KI hat mir 5 Fragen und einen Kontrollfall ohne Unterlagen gestellt. **Richtig:** Artifact-Repository = „Build once, deploy many“, einfacher Rollback; SemVer-Bugfix `1.4.2` → `1.4.3`. **Teilweise richtig:** CI ist nur so gut wie die Tests, mir fehlte aber der Kern (oft und klein in `main` integrieren). Bei einem fehlgeschlagenen Test wusste ich, dass die Pipeline fehlschlägt und man fixt; mir fehlten die Folgen (kein Merge, keine weiteren Jobs, kein Artefakt). **Korrigiert:** Ich hatte Git Flow als passender für CI und Trunk Based als „grosse Änderungen“ bezeichnet – es ist umgekehrt [5][6]. Bei SemVer hatte ich die rechten Stellen nicht auf 0 gesetzt (`1.5.2` statt `1.5.0`, `2.4.2` statt `2.0.0`) [11]. **Veränderter Fall danach selbst gelöst:** `0.3.7` → neues Feature `0.4.0` → Bugfix `0.4.1` (richtig). Branching-Strategien und die Folgen eines roten Tests wiederhole ich vor dem Fachgespräch. |
+| **Eigene Schlussfolgerung** | Am meisten mitgenommen habe ich, dass Trunk Based Development besser zu CI passt als Git Flow, weil kurze Branches und kleine Änderungen oft integriert werden. |
 
 ---
 
