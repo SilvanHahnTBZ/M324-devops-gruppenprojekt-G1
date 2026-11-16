@@ -27,6 +27,8 @@ In diesem Verzeichnis werden die bearbeiteten Theorieblöcke als Markdown-Dateie
 
 Alle erstellten Theoriedateien werden hier direkt verlinkt.
 
+- [T1 – DevOps-Kultur: CALMS und The Three Ways](Theorie/T1_DevOps_Kultur.md)
+
 ## Dokumentation
 
 Hier befinden sich die Dokumentationen zu unserem Projekt.
