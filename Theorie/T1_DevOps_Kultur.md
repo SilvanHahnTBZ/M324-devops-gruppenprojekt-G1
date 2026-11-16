@@ -113,7 +113,7 @@ Meiner Meinung nach hatten diese zwei Veränderungen den grössten Nutzen:
 |---|---|
 | **Eingesetztes Tool** | Claude (Anthropic) in Claude Code |
 | **Wofür** | Ausarbeitung der Aufgaben 1–4 als Entwurf, Abgleich mit den Unterrichtsunterlagen CALMS und The Three Ways, Erklärung der Inhalte |
-| **Prompt (Auszug)** | „Löse T1 (CALMS und The Three Ways, Fallstudie TechNova) und erkläre mir, was gemacht wurde, damit ich es verstehe.“ |
+| **Prompt (Auszug)** | „Löse T1 mit mir zussamen (CALMS und The Three Ways, Fallstudie TechNova) und erkläre mir, was gemacht wurde, damit ich es verstehe. schaue dir zuerst noch an was ich schon gemacht habe und frage mich am ende die fragen ob ich es verstanden habe damit wir es am ende abschliessend und pushen können.“ |
 | **Eigener Anteil** | Transfer (Aufgabe 5) mit Beispiel aus meinem Lehrbetrieb, eigene Schlussfolgerung, Prüfung des KI-Hinweises |
 | **KI-Hinweis (ausgewählt)** | Automation darf nicht mit DevOps gleichgesetzt werden – die CALMS-Unterlage warnt ausdrücklich davor („Fehler komplett durchautomatisieren“). Deshalb sollte bei Aufgabe 4 nicht nur die Pipeline, sondern auch der Kulturwandel stehen. |
 | **Geprüft mit** | CALMS.md, Abschnitt „A für Automation“: Die Aussage steht so in der Unterlage. |
