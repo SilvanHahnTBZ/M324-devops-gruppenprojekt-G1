@@ -302,9 +302,9 @@ Die Quellen stimmen in der Grundidee überein, unterscheiden sich aber in Detail
 | **Geprüft mit** | IBM [4] nennt 8 Phasen, Microsoft [5] aber nur 4 und GitLab [6] 9. Die Aussage stimmt also nur für IBM. |
 | **Korrektur** | Im Dokument steht jetzt, dass es kein einheitliches Modell gibt und welche Quelle welche Phasen nennt (Kapitel 2 und 6). |
 | **Zweiter geprüfter Punkt** | Die verbreitete Aussage „MVP = kleinste mögliche Version“ wurde mit dem Originaltext von Eric Ries [11] verglichen: Ries widerspricht dem ausdrücklich. Kapitel 4 wurde entsprechend formuliert. |
-| **Eigener Anteil** | *(von Silvan zu ergänzen: eigene erste Erklärung vor der KI-Nutzung, offene Fragen, Durchsicht und Anpassung, Zeitlogging, Kanban, Pull Request)* |
-| **Verständnisprüfung** | *(von Silvan zu ergänzen nach der Abfrage ohne Unterlagen)* |
-| **Eigene Schlussfolgerung** | *(von Silvan zu ergänzen)* |
+| **Eigener Anteil** | Zusammenfassung der Kapitel 1–5 gelesen und die Verständnisfragen der KI ohne Unterlagen selbst beantwortet (siehe unten). |
+| **Verständnisprüfung** | Die KI hat mir 5 Fragen ohne Unterlagen gestellt. **Richtig:** SDLC ist linear, der DevOps Lifecycle eine Schleife mit vielen kleinen statt wenigen grossen Releases. Unser MVP sind US-01 bis US-03, die schnellste Feedbackschleife ist pytest lokal. **Teilweise richtig:** SDLC als Fahrplan von der Idee bis zur Wartung mit Vorgehensmodellen (Wasserfall, V-Modell, agil) erklärt, aber die Phasen nicht genannt (Planung/Anforderungen, Design, Implementierung, Test, Deployment, Wartung). Die Verbindung Monitor → Plan richtig mit neuem Wissen für die Planung begründet; ergänzt wurde, dass daraus konkrete Backlog-Einträge entstehen (Second/Third Way aus T1). **Korrigiert:** Ich habe das MVP zuerst als „einfach die kleinste Version“ beschrieben. Laut Ries [11] geht es nicht um ein minimales Produkt, sondern um ein Experiment zum Lernen. Diese Punkte wiederhole ich vor dem Fachgespräch. |
+| **Eigene Schlussfolgerung** | Am meisten mitgenommen habe ich, dass ein MVP ein Experiment ist und nicht einfach eine möglichst kleine Version des Produkts. Wichtig ist, was man damit über die Benutzer lernt. |
 
 ---
 
