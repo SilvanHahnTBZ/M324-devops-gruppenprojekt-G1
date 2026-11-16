@@ -112,9 +112,10 @@ Meiner Meinung nach hatten diese zwei Veränderungen den grössten Nutzen:
 | | |
 |---|---|
 | **Eingesetztes Tool** | Claude (Anthropic) in Claude Code |
-| **Wofür** | Ausarbeitung der Aufgaben 1–4 als Entwurf, Abgleich mit den Unterrichtsunterlagen CALMS und The Three Ways, Erklärung der Inhalte |
-| **Prompt (Auszug)** | „Löse T1 mit mir zussamen (CALMS und The Three Ways, Fallstudie TechNova) und erkläre mir, was gemacht wurde, damit ich es verstehe. schaue dir zuerst noch an was ich schon gemacht habe und frage mich am ende die fragen ob ich es verstanden habe damit wir es am ende abschliessend und pushen können.“ |
-| **Eigener Anteil** | Transfer (Aufgabe 5) mit Beispiel aus meinem Lehrbetrieb, eigene Schlussfolgerung, Prüfung des KI-Hinweises |
+| **Wofür** | Ausarbeitung der Aufgaben 1–4 als Entwurf, Abgleich mit den Unterrichtsunterlagen CALMS und The Three Ways, ausführliche Erklärung der Inhalte |
+| **Prompt (Auszug)** | „Löse T1 (CALMS und The Three Ways, Fallstudie TechNova) und erkläre mir, was gemacht wurde, damit ich es verstehe.“ |
+| **Eigener Anteil** | Transfer (Aufgabe 5) mit eigenem Beispiel aus meinem Lehrbetrieb (SIX, Digital Assets): Ist-Situation, Zuordnung zu Lean und First Way, Massnahme und Einschätzung selbst erarbeitet. Eigene Schlussfolgerung geschrieben. KI-Hinweis anhand der CALMS-Unterlage geprüft. Abgabe durchgelesen, Zeitlogging geführt, Arbeit über Git/Pull Request ins Repository gebracht. |
+| **Verständnis** | Ich habe mir von der KI ausführlich erklären lassen, was gemacht wurde: die fünf CALMS-Bereiche und die drei Ways mit Zuordnung zur Fallstudie, den Unterschied zwischen beiden Modellen (CALMS = was eine Organisation braucht, Three Ways = wie die Arbeit fliesst) und die Begründung der Bewertung in Aufgabe 4. Auf dieser Grundlage habe ich den Transfer auf meinen Betrieb selbst gemacht. |
 | **KI-Hinweis (ausgewählt)** | Automation darf nicht mit DevOps gleichgesetzt werden – die CALMS-Unterlage warnt ausdrücklich davor („Fehler komplett durchautomatisieren“). Deshalb sollte bei Aufgabe 4 nicht nur die Pipeline, sondern auch der Kulturwandel stehen. |
 | **Geprüft mit** | CALMS.md, Abschnitt „A für Automation“: Die Aussage steht so in der Unterlage. |
 | **Eigene Schlussfolgerung** | Der Auftrag war spannend und ich habe neue Sachen gelernt. Von CALMS und The Three Ways hatte ich vorher noch nichts gehört. Die KI hat mir geholfen, die Theorie zu verstehen und auf die Fallstudie anzuwenden. Beim Transfer habe ich gemerkt, dass bei SIX vieles schon automatisiert ist und das grössere Problem eher beim Flow (Wartezeiten wegen Berechtigungen) liegt. |
