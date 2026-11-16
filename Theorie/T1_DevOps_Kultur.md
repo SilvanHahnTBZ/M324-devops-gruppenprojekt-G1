@@ -88,20 +88,22 @@ Meiner Meinung nach hatten diese zwei Veränderungen den grössten Nutzen:
 
 ## 5. Transfer
 
-**Beispiel:** Ein kleines Webagentur-Team (3–4 Personen), das Websites für KMU baut und betreut.
+**Beispiel:** Mein Lehrbetrieb SIX, Abteilung Digital Assets.
 
 **Ist-Situation:**
 
-- Änderungen an Kundenwebsites werden direkt auf dem Live-Server gemacht oder per Hand hochgeladen.
-- Es gibt keine automatisierten Tests. Ob etwas kaputt ist, merkt man oft erst, wenn der Kunde anruft.
-- Wer eine Website gebaut hat, weiss als einziger, wie sie funktioniert. Wenn diese Person krank ist, kann niemand helfen.
+- Bei unseren Projekten läuft vieles schon nach DevOps-Prinzipien: Alles geht über Git-Repositories und Pipelines, es gibt automatisierte Tests und Tools, die Fehler und Vulnerabilities automatisch melden.
+- *Automation* und der *Second Way* (Feedback) sind also schon gut abgedeckt.
+- Das Problem: Manchmal dauern Dinge lange, weil Zugriffe (Accesses) fehlen oder nur bestimmte Personen die nötigen Berechtigungen haben. Dann muss man auf diese Personen warten, auch für Feedback.
 
 **Am stärksten verbessert werden müsste:**
 
-- **CALMS: Automation.** Eine einfache Pipeline (z. B. Push auf GitHub → Build → automatischer Deploy auf eine Preview-Umgebung, danach Freigabe auf Produktion) würde die fehleranfälligen manuellen Uploads ersetzen. Das ist mit heutigen Tools wenig Aufwand und bringt sofort viel.
-- **Three Ways: Second Way (Feedback Loops).** Heute ist der Kunde die Feedbackschleife – das ist die langsamste und teuerste Variante. Mit automatischen Checks (Build, Links, Lighthouse/Tests), Uptime-Monitoring und Reviews vor dem Deployment würden Fehler gefunden, bevor der Kunde sie sieht.
+- **CALMS: Lean.** Das Warten auf andere Personen bringt keinen Mehrwert und ist damit „Waste“. Die Arbeit ist eigentlich bereit, steht aber still, weil man von anderen abhängig ist.
+- **Three Ways: First Way (Systems Thinking).** Der Flow von der Arbeit bis zum Ergebnis wird durch diese Abhängigkeiten gebremst. Fehlende Berechtigungen sind ein typischer Flaschenhals im System. Laut Unterlage sollen solche Übergänge reduziert und z. B. die Bereitstellung von Zugängen sogar automatisiert werden.
 
-**Warum gerade diese beiden:** Sie hängen direkt zusammen. Die Pipeline (Automation) ist der Ort, an dem die automatischen Checks laufen (Feedback). Das Wissensproblem (Sharing) ist auch wichtig, aber in einem so kleinen Team kann man es zuerst mit einfacher Dokumentation im Repository lösen. Das grössere Risiko für die Kunden sind heute unbemerkte Fehler auf Live-Websites.
+**Massnahme:** Bessere Confluence-Seiten, auf denen klar steht, welche Accesses man für welche Aufgaben braucht und wen man dafür fragen muss. So kann man Zugriffe früh beantragen und muss nicht erst warten, wenn man schon blockiert ist.
+
+**Eigene Einschätzung:** Dass nicht alle alle Berechtigungen haben, verstehe ich. Gerade bei SIX ist Sicherheit sehr wichtig. Trotzdem ist es mühsam, wenn man deswegen warten muss. Deshalb geht es nicht darum, allen mehr Rechte zu geben, sondern den Weg zu den Rechten transparenter und schneller zu machen.
 
 ---
 
@@ -110,10 +112,9 @@ Meiner Meinung nach hatten diese zwei Veränderungen den grössten Nutzen:
 | | |
 |---|---|
 | **Eingesetztes Tool** | Claude (Anthropic) in Claude Code |
-| **Wofür** | Strukturierung der Antworten, Abgleich mit den Unterrichtsunterlagen CALMS und The Three Ways, Review auf fachliche Korrektheit |
+| **Wofür** | Ausarbeitung der Aufgaben 1–4 als Entwurf, Abgleich mit den Unterrichtsunterlagen CALMS und The Three Ways, Erklärung der Inhalte |
 | **Prompt (Auszug)** | „Löse T1 (CALMS und The Three Ways, Fallstudie TechNova) und erkläre mir, was gemacht wurde, damit ich es verstehe.“ |
+| **Eigener Anteil** | Transfer (Aufgabe 5) mit Beispiel aus meinem Lehrbetrieb, eigene Schlussfolgerung, Prüfung des KI-Hinweises |
 | **KI-Hinweis (ausgewählt)** | Automation darf nicht mit DevOps gleichgesetzt werden – die CALMS-Unterlage warnt ausdrücklich davor („Fehler komplett durchautomatisieren“). Deshalb sollte bei Aufgabe 4 nicht nur die Pipeline, sondern auch der Kulturwandel stehen. |
 | **Geprüft mit** | CALMS.md, Abschnitt „A für Automation“: Die Aussage steht so in der Unterlage. |
-| **Eigene Schlussfolgerung** | _[Hier selbst ergänzen: Was hast du geprüft oder geändert, und stimmst du der Bewertung zu?]_ |
-
-> Hinweis: Diese Abgabe wurde mit KI-Unterstützung erarbeitet. Die finale Fassung muss in eigenen Worten überarbeitet werden (gemäss Auftrag, Lernprozess Punkt 7).
+| **Eigene Schlussfolgerung** | Der Auftrag war spannend und ich habe neue Sachen gelernt. Von CALMS und The Three Ways hatte ich vorher noch nichts gehört. Die KI hat mir geholfen, die Theorie zu verstehen und auf die Fallstudie anzuwenden. Beim Transfer habe ich gemerkt, dass bei SIX vieles schon automatisiert ist und das grössere Problem eher beim Flow (Wartezeiten wegen Berechtigungen) liegt. |
