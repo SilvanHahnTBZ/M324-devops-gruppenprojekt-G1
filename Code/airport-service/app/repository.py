@@ -6,6 +6,7 @@
 * ``InMemoryAirportRepository`` für isolierte Unit Tests ohne Datenbank.
 """
 
+from datetime import UTC, datetime
 from typing import Protocol
 
 from sqlalchemy import Column, DateTime, Integer, MetaData, String, Table, Uuid, insert, select
@@ -114,4 +115,13 @@ class SqlAlchemyAirportRepository:
                 rows = conn.execute(select(airports_table).order_by(airports_table.c.code)).mappings().all()
         except SQLAlchemyError as exc:
             raise RepositoryError(str(exc)) from exc
-        return [Airport(**row) for row in rows]
+        return [Airport(**{**row, "created_at": _as_utc(row["created_at"])}) for row in rows]
+
+
+def _as_utc(value: datetime) -> datetime:
+    """Stellt sicher, dass Zeitangaben die Zeitzone UTC tragen.
+
+    PostgreSQL (timestamptz) liefert sie mit Zeitzone, SQLite ohne.
+    Gespeichert wird immer in UTC, deshalb ist das Ergänzen korrekt.
+    """
+    return value if value.tzinfo is not None else value.replace(tzinfo=UTC)

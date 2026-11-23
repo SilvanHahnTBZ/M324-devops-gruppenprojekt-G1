@@ -82,3 +82,6 @@ def test_list_all_reads_saved_airports_sorted_by_code(sql_repository):
     for airport in loaded:
         assert airport.id == by_code[airport.code].id
         assert airport.capacity == by_code[airport.code].capacity
+        # Regression: SQLite lieferte created_at ohne Zeitzone (gefunden im E2E-Lauf).
+        assert airport.created_at == by_code[airport.code].created_at
+        assert airport.created_at.tzinfo is not None
