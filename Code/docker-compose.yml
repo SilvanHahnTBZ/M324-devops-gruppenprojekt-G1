@@ -1,0 +1,54 @@
+# Lokale Entwicklungsumgebung: zwei getrennte Datenbanken und beide Dienste.
+# Start:  docker compose -f Code/docker-compose.yml up --build
+# Nur Datenbanken (Dienste mit uvicorn starten):  docker compose -f Code/docker-compose.yml up airport-db flight-db
+# Die Passwörter gelten nur lokal. Für Staging/Production kommen sie aus Secrets (P4).
+
+services:
+  airport-db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: airports
+      POSTGRES_USER: airport
+      POSTGRES_PASSWORD: airport
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airport -d airports"]
+      interval: 5s
+      retries: 10
+
+  flight-db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: flights
+      POSTGRES_USER: flight
+      POSTGRES_PASSWORD: flight
+    ports:
+      - "5434:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U flight -d flights"]
+      interval: 5s
+      retries: 10
+
+  airport-service:
+    build: ./airport-service
+    environment:
+      DATABASE_URL: postgresql+psycopg://airport:airport@airport-db:5432/airports
+    ports:
+      - "8001:8000"
+    depends_on:
+      airport-db:
+        condition: service_healthy
+
+  flight-service:
+    build: ./flight-service
+    environment:
+      DATABASE_URL: postgresql+psycopg://flight:flight@flight-db:5432/flights
+      AIRPORT_SERVICE_URL: http://airport-service:8000
+    ports:
+      - "8002:8000"
+    depends_on:
+      flight-db:
+        condition: service_healthy
+      airport-service:
+        condition: service_started
