@@ -8,7 +8,7 @@
 
 from typing import Protocol
 
-from sqlalchemy import Column, DateTime, Integer, MetaData, String, Table, Uuid, insert
+from sqlalchemy import Column, DateTime, Integer, MetaData, String, Table, Uuid, insert, select
 from sqlalchemy.engine import Engine
 from sqlalchemy.exc import IntegrityError, SQLAlchemyError
 
@@ -39,6 +39,14 @@ class AirportRepository(Protocol):
         """
         ...
 
+    def list_all(self) -> list[Airport]:
+        """Liefert alle Flughäfen, sortiert nach Kürzel.
+
+        Raises:
+            RepositoryError: bei technischen Fehlern.
+        """
+        ...
+
 
 class InMemoryAirportRepository:
     """Speichert Flughäfen in einem Dictionary. Nur für Tests und lokale Versuche."""
@@ -51,6 +59,9 @@ class InMemoryAirportRepository:
             raise DuplicateAirportCodeError(airport.code)
         self._by_code[airport.code] = airport
         return airport
+
+    def list_all(self) -> list[Airport]:
+        return [self._by_code[code] for code in sorted(self._by_code)]
 
 
 metadata = MetaData()
@@ -95,3 +106,12 @@ class SqlAlchemyAirportRepository:
         except SQLAlchemyError as exc:
             raise RepositoryError(str(exc)) from exc
         return airport
+
+    def list_all(self) -> list[Airport]:
+        # Eine einzige Abfrage für alle Einträge (kein N+1). Sortierung in der DB.
+        try:
+            with self._engine.connect() as conn:
+                rows = conn.execute(select(airports_table).order_by(airports_table.c.code)).mappings().all()
+        except SQLAlchemyError as exc:
+            raise RepositoryError(str(exc)) from exc
+        return [Airport(**row) for row in rows]

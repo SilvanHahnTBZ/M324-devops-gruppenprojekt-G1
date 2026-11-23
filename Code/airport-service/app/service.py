@@ -40,3 +40,7 @@ class AirportService:
             created_at=self._clock(),
         )
         return self._repository.add(airport)
+
+    def list_airports(self) -> list[Airport]:
+        """US-02: liefert alle erfassten Flughäfen, sortiert nach Kürzel."""
+        return self._repository.list_all()

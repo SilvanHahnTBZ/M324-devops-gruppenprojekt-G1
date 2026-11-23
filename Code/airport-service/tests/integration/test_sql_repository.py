@@ -60,3 +60,25 @@ def test_unique_constraint_rejects_duplicate_code(sql_repository):
 
     with pytest.raises(DuplicateAirportCodeError):
         sql_repository.add(_airport("ZRH"))
+
+
+def test_list_all_reads_saved_airports_sorted_by_code(sql_repository):
+    """
+    Gespeicherte Flughäfen werden vollständig und nach Kürzel sortiert gelesen.
+
+    Given drei gespeicherte Flughäfen in zufälliger Reihenfolge
+    When list_all aufgerufen wird
+    Then kommen alle drei sortiert zurück, mit denselben Werten wie gespeichert.
+
+    @param sql_repository Repository auf echter Datenbank
+    @expected Kürzel BSL, GVA, ZRH in dieser Reihenfolge, Felder unverändert
+    """
+    saved = [sql_repository.add(_airport(code)) for code in ("ZRH", "BSL", "GVA")]
+
+    loaded = sql_repository.list_all()
+
+    assert [a.code for a in loaded] == ["BSL", "GVA", "ZRH"]
+    by_code = {a.code: a for a in saved}
+    for airport in loaded:
+        assert airport.id == by_code[airport.code].id
+        assert airport.capacity == by_code[airport.code].capacity

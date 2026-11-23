@@ -47,11 +47,22 @@ class AirportCreate(BaseModel):
 class AirportRead(BaseModel):
     """Ausgabe eines Flughafens mit allen Feldern."""
 
+    # Erlaubt die Umwandlung aus dem Domänenobjekt ``Airport`` (Dataclass).
+    model_config = ConfigDict(from_attributes=True)
+
     id: UUID
     name: str
     code: str
     capacity: int
     created_at: datetime
+
+
+class AirportList(BaseModel):
+    """Ausgabe für US-02: strukturierte Liste mit Anzahl und Hinweis."""
+
+    count: int
+    items: list[AirportRead]
+    message: str | None = None
 
 
 class ErrorResponse(BaseModel):

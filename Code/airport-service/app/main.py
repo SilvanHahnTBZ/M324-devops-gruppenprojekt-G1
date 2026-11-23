@@ -20,7 +20,7 @@ from app.repository import (
     RepositoryError,
     SqlAlchemyAirportRepository,
 )
-from app.schemas import AirportCreate, AirportRead, ErrorResponse
+from app.schemas import AirportCreate, AirportList, AirportRead, ErrorResponse
 from app.service import AirportService
 
 DEFAULT_DATABASE_URL = "postgresql+psycopg://airport:airport@localhost:5433/airports"
@@ -85,6 +85,29 @@ def create_app(repository: AirportRepository | None = None) -> FastAPI:
                 status_code=503,
                 content={"detail": "Der Flughafen konnte nicht gespeichert werden. Bitte später erneut versuchen."},
             )
+
+    @app.get(
+        "/airports",
+        response_model=AirportList,
+        tags=["Flughäfen"],
+        responses={503: {"model": ErrorResponse}},
+    )
+    def list_airports(service: ServiceDep):
+        """US-02: Alle Flughäfen auslesen.
+
+        Ein leerer Bestand ist kein technischer Fehler: Antwort 200 mit
+        ``count = 0`` und einem Hinweis. So kann der Flugservice die Liste
+        immer gleich auswerten.
+        """
+        try:
+            airports = service.list_airports()
+        except RepositoryError:
+            return JSONResponse(
+                status_code=503,
+                content={"detail": "Die Flughäfen konnten nicht geladen werden. Bitte später erneut versuchen."},
+            )
+        message = None if airports else "Es sind noch keine Flughäfen erfasst."
+        return AirportList(count=len(airports), items=airports, message=message)
 
     return app
 
