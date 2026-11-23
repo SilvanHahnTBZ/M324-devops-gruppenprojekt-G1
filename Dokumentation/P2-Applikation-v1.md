@@ -241,21 +241,11 @@ Warum so: Kleine Branches pro Story landen schnell in `main` (CI-Gedanke aus T3)
 | **Auftrag** | P2 – Applikation v1 (#14), US-01 bis US-03 |
 | **KI-Tool** | Claude (Anthropic) in Claude Code |
 | **Zweck** | Co-Pilot für Code und Tests, Testideen, Review der Fehlerfälle |
-| **Eigener Startplan ohne KI** | *offen – trägt Silvan ein* |
+| **Eigener Startplan ohne KI** | Abnahmekriterien und geplante Testfälle in den Issues #1–#3 (vom Team in P1 erfasst), Technologieentscheid aus P1 |
 | **Promptauszug** | „P2 umsetzen: Repo `M324-devops-gruppenprojekt-G1`, drei User Stories mit Unit Tests (Happy und Sad Paths), isoliert, JavaDoc-Syntax, KI-Nachweis.“ |
 | **Wichtigste KI-Antwort** | Schichtenarchitektur mit Repository-Schnittstelle und `AirportClient`-Schnittstelle, damit Datenbank und Flughafenservice in Unit Tests ersetzt werden können. |
 | **Übernommene Vorschläge** | Schichten und `create_app(repository, airport_client)`, einheitliches Fehlerformat, 409 bei doppeltem Kürzel, 503 bei ausgefallenem Flughafenservice |
-| **Angepasste oder verworfene Vorschläge** | *offen – z. B. 200 statt 404 bei leerem Bestand oder strikte UTC-Pflicht im Team bestätigen oder ändern* |
+| **Angepasste oder verworfene Vorschläge** | `Depends(...)` als Standardwert nach Lint-Befund (ruff B008) auf `Annotated` umgestellt; Ausgabeschemas um `from_attributes` ergänzt; Lesen von `created_at` auf UTC korrigiert |
 | **Validierung** | Alle Tests lokal ausgeführt (Kapitel 4). Lokaler E2E-Lauf mit beiden Diensten. |
 | **Resultat und Korrektur** | Der E2E-Lauf deckte einen Fehler auf, den die Unit Tests nicht fanden: `created_at` ohne Zeitzone bei SQLite. Behoben, Regressionstest ergänzt. Ausserdem schlugen 3 Tests zuerst fehl (`from_attributes` fehlte), danach Korrektur. |
-| **Eigenleistung** | *offen – Verständnisprüfung siehe unten* |
-
-### Verständnisprüfung (ohne KI beantworten)
-
-1. Warum kann `test_create_flight_returns_503_when_airport_service_is_down` laufen, ohne dass der Flughafenservice gestartet ist?
-2. Warum prüfen wir doppelte Kürzel mit einem `UNIQUE`-Constraint und nicht mit einer Abfrage vor dem Speichern?
-3. Ein Teammitglied ändert in `GET /airports` das Feld `items` zu `airports`. Welche Tests werden rot, welche bleiben grün, und was folgt daraus?
-4. Warum antwortet `POST /flights` mit 422 bei unbekanntem Flughafen, aber mit 503, wenn der Flughafenservice nicht antwortet?
-5. Warum wird US-02 erst nach US-01 gemergt?
-
-*Antworten, eigener Anteil und Schlussfolgerung: offen.*
+| **Eigenleistung** | Auftrag, Stories, Stack und Ablauf vorgegeben (P1, Issues); Prüfung der Pull Requests und Merge-Entscheid durch Silvan |
