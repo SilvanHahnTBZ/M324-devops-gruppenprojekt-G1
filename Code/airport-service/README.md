@@ -5,6 +5,7 @@ REST-API zur Verwaltung von Flughäfen. Version `0.1.0`.
 | Methode | Pfad | Story | Erfolg | Fehler |
 |---|---|---|---|---|
 | `POST` | `/airports` | US-01 [#1](https://github.com/SilvanHahnTBZ/M324-devops-gruppenprojekt-G1/issues/1) | 201 | 409 Kürzel doppelt, 422 ungültige Eingabe, 503 DB-Fehler |
+| `GET` | `/airports` | US-02 [#2](https://github.com/SilvanHahnTBZ/M324-devops-gruppenprojekt-G1/issues/2) | 200 `{count, items, message}` (leer: `count 0` + Hinweis) | 503 Abfrage fehlgeschlagen |
 | `GET` | `/health` | Betrieb | 200 | – |
 
 Die interaktive API-Doku liegt nach dem Start unter <http://localhost:8001/docs>.
